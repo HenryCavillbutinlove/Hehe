@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">HEHE</a>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <!-- <h3 class="text">You aren't just a star or the moon..</h3> -->
+        <h2 id="text">You aren't just the stars or the moon.. <br> For me, You are the whole Night Sky.</h2>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="mem">
+        <h2>Memory Lane</h2>
+        <p>Where would you like to go today mi'lady?</p>
+        
+        <div class="boxes">
+            <div class="box">
+                <div class="imgbx">
+                    <img src="ffc.jpg" alt="">
+                </div>
+                <div class="content">
+                    <a href="ffc.html">FFC</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="mcd.avif" alt="">
+                </div>
+                <div class="content">
+                    <a href="mcd.html">McDonald's</a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgbx">
+                    <img src="3c.webp" alt="">
+                </div>
+                <div class="content">
+                    <a href="3c.html">3Cs</a>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.25 + 'px';
+            moon.style.top = value*1.05 + 'px';
+            mountains_behind.style.top = value*0.5 + 'px';
+            mountains_front.style.top = value*0 + 'px';
+            text.style.marginRight = value*4 + 'px';
+            header.style.top = value*0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
